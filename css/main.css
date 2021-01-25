@@ -142,7 +142,7 @@ ul {
 
 .slide .drop {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -383,6 +383,13 @@ ul {
   left: 11px;
   cursor: pointer;
   transition: all 0.5s;
+}
+
+@media (max-width: 576px) {
+  .product .product-img .icon {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
 }
 
 .product .product-img a:hover {
@@ -795,6 +802,12 @@ nav .nav-bottom .nav-icons .user .setting-anchor::after {
   display: none;
 }
 
+nav .nav-bottom .nav-icons .user .top-dropDown {
+  left: 50%;
+  right: unset;
+  transform: translateX(-50%);
+}
+
 nav .nav-bottom .nav-icons .cart {
   position: relative;
   transition: all 0.5s;
@@ -909,7 +922,7 @@ nav .nava .nava-content .nava-head {
     transition: all 0.5s;
   }
   nav .nava .nava-content {
-    background-color: white;
+    background-color: #fffffffa;
     width: 100%;
     transition: all 0.5s;
     flex-direction: column;
@@ -1661,7 +1674,8 @@ html[dir="ltr"] footer .footer-top ul li:hover {
 }
 
 @keyframes lds-grid {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {

@@ -12,7 +12,6 @@
     justify-content: center;
     align-items: center;
 
-  
     .content {
         display: flex;
         align-items: center;
@@ -24,60 +23,60 @@
         position: relative;
         width: 80px;
         height: 80px;
-      }
-      .lds-grid div {
+    }
+    .lds-grid div {
         position: absolute;
         width: 16px;
         height: 16px;
         border-radius: 50%;
         background: $color1;
         animation: lds-grid 1.2s linear infinite;
-      }
-      .lds-grid div:nth-child(1) {
+    }
+    .lds-grid div:nth-child(1) {
         top: 8px;
         left: 8px;
         animation-delay: 0s;
-      }
-      .lds-grid div:nth-child(2) {
+    }
+    .lds-grid div:nth-child(2) {
         top: 8px;
         left: 32px;
         animation-delay: -0.4s;
-      }
-      .lds-grid div:nth-child(3) {
+    }
+    .lds-grid div:nth-child(3) {
         top: 8px;
         left: 56px;
         animation-delay: -0.8s;
-      }
-      .lds-grid div:nth-child(4) {
+    }
+    .lds-grid div:nth-child(4) {
         top: 32px;
         left: 8px;
         animation-delay: -0.4s;
-      }
-      .lds-grid div:nth-child(5) {
+    }
+    .lds-grid div:nth-child(5) {
         top: 32px;
         left: 32px;
         animation-delay: -0.8s;
-      }
-      .lds-grid div:nth-child(6) {
+    }
+    .lds-grid div:nth-child(6) {
         top: 32px;
         left: 56px;
         animation-delay: -1.2s;
-      }
-      .lds-grid div:nth-child(7) {
+    }
+    .lds-grid div:nth-child(7) {
         top: 56px;
         left: 8px;
         animation-delay: -0.8s;
-      }
-      .lds-grid div:nth-child(8) {
+    }
+    .lds-grid div:nth-child(8) {
         top: 56px;
         left: 32px;
         animation-delay: -1.2s;
-      }
-      .lds-grid div:nth-child(9) {
+    }
+    .lds-grid div:nth-child(9) {
         top: 56px;
         left: 56px;
         animation-delay: -1.6s;
-      }
+    }
 }
 
 .s-containe {
@@ -191,6 +190,11 @@
             left: 11px;
             cursor: pointer;
             transition: all 0.5s;
+
+            @media (max-width: 576px) {
+                padding: 5px 8px;
+                font-size: 12px;
+            }
         }
         a {
             &:hover {
@@ -609,7 +613,13 @@ nav {
                         display: none;
                     }
                 }
+                .top-dropDown {
+                    left: 50%;
+                    right: unset;
+                    transform: translateX(-50%);
+                }
             }
+
             .cart {
                 position: relative;
                 transition: all 0.5s;
@@ -730,7 +740,7 @@ nav {
             transition: all 0.5s;
 
             .nava-content {
-                background-color: white;
+                background-color: #fffffffa;
                 width: 100%;
                 transition: all 0.5s;
                 flex-direction: column;
@@ -1308,10 +1318,10 @@ footer {
                 margin: 0;
             }
 
-            a{
+            a {
                 &:hover,
-                &:focus{
-                    color:$color1;
+                &:focus {
+                    color: $color1;
                 }
             }
         }
@@ -1521,11 +1531,11 @@ html[dir="ltr"] {
 }
 
 @keyframes lds-grid {
-    0%, 100% {
-      opacity: 1;
+    0%,
+    100% {
+        opacity: 1;
     }
     50% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
-  }
-  
+}
